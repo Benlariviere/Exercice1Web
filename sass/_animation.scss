@@ -35,7 +35,7 @@ $columns: 5;
 
 @for $i from 1 through $columns {
     .animation div:nth-of-type(#{$i}) {
-        width: (100% / $i);
-        animation-delay: $i;
+        
+        animation-delay:.5*$i#{s};
     }
 }

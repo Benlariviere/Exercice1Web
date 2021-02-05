@@ -59,14 +59,14 @@ flex-direction: column;
     grid-template-areas: 
     "entete entete entete"
     "menu menu menu"
-    "principal annonce1 annonce1"
-    "principal annonce2 annonce2"
+    "annonce1 annonce1 annonce1"
+    "principal principal principal"
     "pied2page pied2page pied2page";
     @include desktop{
       grid-template-areas:
       "entete entete entete"
       "menu menu menu"
-      "principal1 annonce1 anonnce1"
+      "principal annonce1 annonce1"
       "pied2page pied2page pied2page" ;  
     }
 }
@@ -121,18 +121,22 @@ grid-area: entete;
 .entete{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     section{
         display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    
     div{
         display: flex;
         justify-content: center;
+        align-items: center;
         width: 50px;
         height: 50px;
-        border: 50%;
+        border-radius: 50%;
         background-color: red;
+        padding: 20px;
     }
     }
 }
