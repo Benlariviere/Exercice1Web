@@ -62,12 +62,27 @@ flex-direction: column;
     "principal annonce1 annonce1"
     "principal annonce2 annonce2"
     "pied2page pied2page pied2page";
+    @include desktop{
+      grid-template-areas:
+      "entete entete entete"
+      "menu menu menu"
+      "principal1 annonce1 anonnce1"
+      "pied2page pied2page pied2page" ;  
+    }
 }
 .entete{
 grid-area: entete;
 }
 .menu{
     grid-area: menu;
+
+}
+.principal{
+    grid-area: principal;
+   
+}
+.pied2page{
+    grid-area: pied2page;
 
 }
 .annonce1{
@@ -85,7 +100,7 @@ grid-area: entete;
     }
 
 }
-.annonce2{
+/*.annonce2{
     grid-area: annonce2;
     padding: 42px;
     margin: 20px;
@@ -97,13 +112,28 @@ grid-area: entete;
         justify-content: space-around;
     }
 
-}
+}*/
 .principal{
-    grid-area: principal;
+  
     display: grid;
     place-items: center;
 }
-.pied2page{
-    grid-area: pied2page;
-
+.entete{
+    display: flex;
+    flex-direction: row;
+    section{
+        display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    div{
+        display: flex;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border: 50%;
+        background-color: red;
+    }
+    }
 }
+
